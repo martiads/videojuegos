@@ -6,69 +6,108 @@
     <title>Videojuegos 2025 - Las Últimas Novedades</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>Videojuegos 2025</h1>
-        <p>Las novedades más esperadas del año</p>
-        <nav class="main-navigation">
-            <ul class="nav-list">
-                <li class="nav-item"><a href="#lanzamientos" class="nav-link">Lanzamientos Principales</a></li>
-                <li class="nav-item"><a href="#nintendo" class="nav-link">Nintendo Switch 2</a></li>
-                <li class="nav-item"><a href="#monster-hunter" class="nav-link">Monster Hunter Wilds</a></li>
-                <li class="nav-item"><a href="#gta" class="nav-link">GTA VI</a></li>
-            </ul>
-        </nav>
+    <header class="hero-header">
+        <div class="header-overlay"></div>
+        <div class="header-content">
+            <h1>Videojuegos 2025</h1>
+            <p class="tagline">Las novedades más esperadas del año</p>
+            <nav class="main-navigation">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#lanzamientos" class="nav-link"><i class="fas fa-gamepad"></i> Lanzamientos</a></li>
+                    <li class="nav-item"><a href="#nintendo" class="nav-link"><i class="fas fa-dice-d6"></i> Nintendo Switch 2</a></li>
+                    <li class="nav-item"><a href="#monster-hunter" class="nav-link"><i class="fas fa-dragon"></i> Monster Hunter</a></li>
+                    <li class="nav-item"><a href="#gta" class="nav-link"><i class="fas fa-car"></i> GTA VI</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <div class="container">
-        <section id="lanzamientos">
+        <section id="lanzamientos" class="section-wrapper">
             <h2 class="section-title">Lanzamientos Principales</h2>
             <div class="game-grid featured-launches">
                 <article class="game-card main-release">
+                    <div class="game-image">
+                        <div class="game-badge">Destacado</div>
+                        <img src="/api/placeholder/400/220" alt="Civilization 7">
+                        <div class="game-overlay">
+                            <button class="play-trailer"><i class="fas fa-play"></i> Ver Tráiler</button>
+                        </div>
+                    </div>
                     <div class="game-content">
                         <h3 class="game-title">Civilization 7</h3>
                         <div class="game-info">
-                            <p class="release-date"><strong>Fecha:</strong> 11 de febrero, 2025</p>
-                            <p class="platforms"><strong>Plataformas:</strong> PC, PS5, Xbox Series X/S, Switch</p>
+                            <p class="release-date"><i class="far fa-calendar-alt"></i> <strong>Fecha:</strong> 11 de febrero, 2025</p>
+                            <p class="platforms"><i class="fas fa-desktop"></i> <strong>Plataformas:</strong> PC, PS5, Xbox Series X/S, Switch</p>
                         </div>
                         <p class="game-description">La nueva entrega del legendario juego de estrategia llega con gráficos mejorados y mecánicas renovadas.</p>
                     </div>
                 </article>
 
                 <article class="game-card">
-                    <h3 class="game-title">Avowed</h3>
-                    <p><strong>Fecha:</strong> 18 de febrero, 2025</p>
-                    <p><strong>Plataformas:</strong> PC, Xbox Series X/S</p>
-                    <p>Un nuevo RPG de fantasía que promete revolucionar el género.</p>
+                    <div class="game-image">
+                        <img src="/api/placeholder/400/220" alt="Avowed">
+                        <div class="game-overlay">
+                            <button class="play-trailer"><i class="fas fa-play"></i> Ver Tráiler</button>
+                        </div>
+                    </div>
+                    <div class="game-content">
+                        <h3 class="game-title">Avowed</h3>
+                        <p class="release-info"><i class="far fa-calendar-alt"></i> <strong>Fecha:</strong> 18 de febrero, 2025</p>
+                        <p class="platform-info"><i class="fas fa-desktop"></i> <strong>Plataformas:</strong> PC, Xbox Series X/S</p>
+                        <p>Un nuevo RPG de fantasía que promete revolucionar el género.</p>
+                    </div>
                 </article>
 
                 <article class="game-card">
-                    <h3 class="game-title">Assassin's Creed Shadows</h3>
-                    <p><strong>Fecha:</strong> 20 de marzo, 2025</p>
-                    <p><strong>Plataformas:</strong> PC, PS5, Xbox Series X/S</p>
-                    <p>La saga de asesinos nos lleva al Japón feudal en su entrega más ambiciosa.</p>
+                    <div class="game-image">
+                        <img src="/api/placeholder/400/220" alt="Assassin's Creed Shadows">
+                        <div class="game-overlay">
+                            <button class="play-trailer"><i class="fas fa-play"></i> Ver Tráiler</button>
+                        </div>
+                    </div>
+                    <div class="game-content">
+                        <h3 class="game-title">Assassin's Creed Shadows</h3>
+                        <p class="release-info"><i class="far fa-calendar-alt"></i> <strong>Fecha:</strong> 20 de marzo, 2025</p>
+                        <p class="platform-info"><i class="fas fa-desktop"></i> <strong>Plataformas:</strong> PC, PS5, Xbox Series X/S</p>
+                        <p>La saga de asesinos nos lleva al Japón feudal en su entrega más ambiciosa.</p>
+                    </div>
                 </article>
             </div>
         </section>
 
         <section id="nintendo" class="highlight console-announcement">
             <div class="announcement-content">
+                <div class="announcement-icon">
+                    <i class="fas fa-dice-d6"></i>
+                </div>
                 <h2>Nintendo Switch 2</h2>
                 <div class="announcement-details">
                     <p class="announcement-text">La nueva consola de Nintendo llegará en 2025 con retrocompatibilidad completa.</p>
-                    <p class="event-date">No te pierdas el Nintendo Direct del <strong>2 de abril de 2025</strong> para todos los detalles.</p>
+                    <div class="event-badge">
+                        <i class="far fa-calendar-check"></i>
+                        <p class="event-date">No te pierdas el Nintendo Direct del <strong>2 de abril de 2025</strong> para todos los detalles.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="monster-hunter" class="featured-game">
+        <section id="monster-hunter" class="featured-game section-wrapper">
             <h2 class="section-title">Monster Hunter Wilds</h2>
             <div class="game-card featured">
+                <div class="game-image featured-image">
+                    <img src="/api/placeholder/800/400" alt="Monster Hunter Wilds">
+                    <div class="game-overlay">
+                        <button class="play-trailer"><i class="fas fa-play"></i> Ver Tráiler</button>
+                    </div>
+                </div>
                 <div class="game-content">
                     <div class="game-info">
-                        <p class="release-date"><strong>Fecha:</strong> 28 de febrero, 2025</p>
-                        <p class="platforms"><strong>Plataformas:</strong> PC, PS5, Xbox Series X/S</p>
+                        <p class="release-date"><i class="far fa-calendar-alt"></i> <strong>Fecha:</strong> 28 de febrero, 2025</p>
+                        <p class="platforms"><i class="fas fa-desktop"></i> <strong>Plataformas:</strong> PC, PS5, Xbox Series X/S</p>
                     </div>
                     <p class="featured-description">La nueva entrega de Monster Hunter promete entornos más grandes y dinámicos que nunca, con nuevas criaturas y mecánicas de juego revolucionarias.</p>
                 </div>
@@ -79,71 +118,132 @@
             <div class="featured-banner">
                 <h2>Grand Theft Auto VI</h2>
                 <div class="featured-content">
-                    <p class="release-date">Otoño 2025</p>
-                    <p class="platforms">PS5, Xbox Series X/S, PC</p>
+                    <div class="premium-badge">Estreno Destacado</div>
+                    <p class="release-date"><i class="far fa-calendar-alt"></i> Otoño 2025</p>
+                    <p class="platforms"><i class="fas fa-desktop"></i> PS5, Xbox Series X/S, PC</p>
                     <p class="description">Ambientado en el estado ficticio de Leonida, con Vice City como núcleo. El juego más esperado de la historia reciente, con un tráiler que rompió récords en YouTube.</p>
+                    <button class="cta-button">Ver más detalles <i class="fas fa-arrow-right"></i></button>
                 </div>
             </div>
         </section>
 
-        <section>
+        <section class="section-wrapper">
             <h2 class="section-title">Próximos Lanzamientos</h2>
             <div class="game-grid">
                 <article class="game-card nintendo">
-                    <h3 class="game-title">Metroid Prime 4: Beyond</h3>
-                    <p><strong>Fecha:</strong> 2025</p>
-                    <p><strong>Plataformas:</strong> Nintendo Switch, Switch 2</p>
-                    <p>La icónica Samus Aran regresa en un FPS de exploración espacial.</p>
+                    <div class="game-image">
+                        <img src="/api/placeholder/400/220" alt="Metroid Prime 4">
+                        <div class="platform-badge nintendo-badge">Nintendo</div>
+                    </div>
+                    <div class="game-content">
+                        <h3 class="game-title">Metroid Prime 4: Beyond</h3>
+                        <p class="release-info"><i class="far fa-calendar-alt"></i> <strong>Fecha:</strong> 2025</p>
+                        <p class="platform-info"><i class="fas fa-desktop"></i> <strong>Plataformas:</strong> Nintendo Switch, Switch 2</p>
+                        <p>La icónica Samus Aran regresa en un FPS de exploración espacial.</p>
+                    </div>
                 </article>
 
                 <article class="game-card nintendo">
-                    <h3 class="game-title">Pokémon Legends: Z-A</h3>
-                    <p><strong>Fecha:</strong> 2025</p>
-                    <p><strong>Plataformas:</strong> Nintendo Switch, Switch 2</p>
-                    <p>Nueva entrega de la serie Legends, ambientada en Lumiose City.</p>
+                    <div class="game-image">
+                        <img src="/api/placeholder/400/220" alt="Pokémon Legends: Z-A">
+                        <div class="platform-badge nintendo-badge">Nintendo</div>
+                    </div>
+                    <div class="game-content">
+                        <h3 class="game-title">Pokémon Legends: Z-A</h3>
+                        <p class="release-info"><i class="far fa-calendar-alt"></i> <strong>Fecha:</strong> 2025</p>
+                        <p class="platform-info"><i class="fas fa-desktop"></i> <strong>Plataformas:</strong> Nintendo Switch, Switch 2</p>
+                        <p>Nueva entrega de la serie Legends, ambientada en Lumiose City.</p>
+                    </div>
                 </article>
 
                 <article class="game-card sony">
-                    <h3 class="game-title">Death Stranding 2: On the Beach</h3>
-                    <p><strong>Fecha:</strong> 2025</p>
-                    <p><strong>Plataformas:</strong> PS5</p>
-                    <p>La esperada secuela de Kojima con más narrativa excéntrica y mundo abierto expandido.</p>
+                    <div class="game-image">
+                        <img src="/api/placeholder/400/220" alt="Death Stranding 2">
+                        <div class="platform-badge sony-badge">PlayStation</div>
+                    </div>
+                    <div class="game-content">
+                        <h3 class="game-title">Death Stranding 2: On the Beach</h3>
+                        <p class="release-info"><i class="far fa-calendar-alt"></i> <strong>Fecha:</strong> 2025</p>
+                        <p class="platform-info"><i class="fas fa-desktop"></i> <strong>Plataformas:</strong> PS5</p>
+                        <p>La esperada secuela de Kojima con más narrativa excéntrica y mundo abierto expandido.</p>
+                    </div>
                 </article>
             </div>
         </section>
 
-        <section>
+        <section class="section-wrapper">
             <h2 class="section-title">Más Títulos 2025</h2>
             <div class="game-grid">
                 <article class="game-card">
-                    <h3 class="game-title">Ghost of Yōtei</h3>
-                    <p><strong>Fecha:</strong> 2025</p>
-                    <p><strong>Plataformas:</strong> PS5</p>
-                    <p>Secuela de Ghost of Tsushima, con un nuevo protagonista y ambientación.</p>
+                    <div class="game-image">
+                        <img src="/api/placeholder/400/220" alt="Ghost of Yōtei">
+                        <div class="platform-badge sony-badge">PlayStation</div>
+                    </div>
+                    <div class="game-content">
+                        <h3 class="game-title">Ghost of Yōtei</h3>
+                        <p class="release-info"><i class="far fa-calendar-alt"></i> <strong>Fecha:</strong> 2025</p>
+                        <p class="platform-info"><i class="fas fa-desktop"></i> <strong>Plataformas:</strong> PS5</p>
+                        <p>Secuela de Ghost of Tsushima, con un nuevo protagonista y ambientación.</p>
+                    </div>
                 </article>
 
                 <article class="game-card">
-                    <h3 class="game-title">Fable</h3>
-                    <p><strong>Fecha:</strong> 2025</p>
-                    <p><strong>Plataformas:</strong> PC, Xbox Series X/S</p>
-                    <p>Reinicio de la clásica serie RPG de fantasía.</p>
+                    <div class="game-image">
+                        <img src="/api/placeholder/400/220" alt="Fable">
+                        <div class="platform-badge xbox-badge">Xbox</div>
+                    </div>
+                    <div class="game-content">
+                        <h3 class="game-title">Fable</h3>
+                        <p class="release-info"><i class="far fa-calendar-alt"></i> <strong>Fecha:</strong> 2025</p>
+                        <p class="platform-info"><i class="fas fa-desktop"></i> <strong>Plataformas:</strong> PC, Xbox Series X/S</p>
+                        <p>Reinicio de la clásica serie RPG de fantasía.</p>
+                    </div>
                 </article>
 
                 <article class="game-card">
-                    <h3 class="game-title">Dune: Awakening</h3>
-                    <p><strong>Fecha:</strong> 2025</p>
-                    <p><strong>Plataformas:</strong> PC, PS5, Xbox Series X/S</p>
-                    <p>MMO de supervivencia en el universo de Dune.</p>
+                    <div class="game-image">
+                        <img src="/api/placeholder/400/220" alt="Dune: Awakening">
+                    </div>
+                    <div class="game-content">
+                        <h3 class="game-title">Dune: Awakening</h3>
+                        <p class="release-info"><i class="far fa-calendar-alt"></i> <strong>Fecha:</strong> 2025</p>
+                        <p class="platform-info"><i class="fas fa-desktop"></i> <strong>Plataformas:</strong> PC, PS5, Xbox Series X/S</p>
+                        <p>MMO de supervivencia en el universo de Dune.</p>
+                    </div>
                 </article>
             </div>
         </section>
-    </div> <!-- Only one container closing div -->
+    </div>
     
     <footer class="site-footer">
         <div class="footer-content">
+            <div class="footer-logo">
+                <h3>Videojuegos 2025</h3>
+                <p>Tu portal de información gamer</p>
+            </div>
+            <div class="footer-links">
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="#lanzamientos">Lanzamientos</a></li>
+                    <li><a href="#nintendo">Nintendo Switch 2</a></li>
+                    <li><a href="#monster-hunter">Monster Hunter</a></li>
+                    <li><a href="#gta">GTA VI</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Síguenos</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
             <p class="copyright">© 2024 Videojuegos 2025</p>
             <p class="legal">Todas las marcas comerciales pertenecen a sus respectivos propietarios.</p>
-            <div class="footer-links">
+            <div class="legal-links">
                 <a href="#" class="privacy-policy">Política de Privacidad</a>
                 <a href="#" class="terms">Términos de Uso</a>
                 <a href="#" class="contact">Contacto</a>
@@ -157,5 +257,30 @@
             <div class="video-container"></div>
         </div>
     </div>
+
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Script para manejar los trailers y el botón de scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const scrollBtn = document.getElementById('scrollTop');
+            
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    scrollBtn.classList.add('visible');
+                } else {
+                    scrollBtn.classList.remove('visible');
+                }
+            });
+            
+            scrollBtn.addEventListener('click', function() {
+                window.scrollTo({top: 0, behavior: 'smooth'});
+            });
+            
+            // Aquí iría la lógica para los trailers si fuera necesario
+        });
+    </script>
 </body>
 </html>
