@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTA VI - Detalles y Novedades</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="hero-header gta-header">
+        <div class="header-overlay"></div>
+        <div class="header-content">
+            <h1>Grand Theft Auto VI</h1>
+            <p class="tagline">Bienvenido a Leonida</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <a href="index.html" class="back-button">
+            <i class="fas fa-arrow-left"></i>
+            Volver al Inicio
+        </a>
+
+        <section class="section-wrapper">
+            <div class="gta-info-grid">
+                <div class="gta-main-info">
+                    <h2 class="section-title">Detalles del Juego</h2>
+                    <div class="info-card">
+                        <div class="info-item">
+                            <i class="far fa-calendar-alt"></i>
+                            <h3>Fecha de Lanzamiento</h3>
+                            <p>Otoño 2025</p>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-desktop"></i>
+                            <h3>Plataformas</h3>
+                            <p>PS5, Xbox Series X/S, PC</p>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <h3>Ubicación</h3>
+                            <p>Vice City, Leonida</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gta-media">
+                    <img src="/api/placeholder/800/400" alt="GTA VI Screenshot" class="featured-image">
+                </div>
+            </div>
+        </section>
+
+        <section class="section-wrapper">
+            <h2 class="section-title">Características Principales</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Protagonistas Duales</h3>
+                    <p>Lucia y Jason, los primeros protagonistas duales desde GTA V</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-map"></i>
+                    <h3>Mundo Expandido</h3>
+                    <p>El mapa más grande y detallado en la historia de Rockstar Games</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-code-branch"></i>
+                    <h3>Historia Ramificada</h3>
+                    <p>Decisiones que afectan el desarrollo de la narrativa</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h3>GTA VI</h3>
+                <p>El futuro del entretenimiento</p>
+            </div>
+            <div class="footer-social">
+                <h4>Síguenos</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="copyright">© 2024 Rockstar Games</p>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const scrollBtn = document.getElementById('scrollTop');
+            
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    scrollBtn.classList.add('visible');
+                } else {
+                    scrollBtn.classList.remove('visible');
+                }
+            });
+            
+            scrollBtn.addEventListener('click', function() {
+                window.scrollTo({top: 0, behavior: 'smooth'});
+            });
+        });
+    </script>
+</body>
+</html>

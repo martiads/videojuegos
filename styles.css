@@ -748,3 +748,92 @@ body {
         gap: 1rem;
     }
 }
+/* Add these styles to your existing CSS file */
+
+.gta-header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('/api/placeholder/1920/1080');
+    height: 60vh;
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 24px;
+    background: #2c3e50;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    margin: 30px 0;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.back-button i {
+    margin-right: 10px;
+}
+
+.back-button:hover {
+    background: #34495e;
+    transform: translateX(-5px);
+}
+
+.gta-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.info-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.info-item {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.info-item i {
+    font-size: 2em;
+    color: #e74c3c;
+    margin-bottom: 15px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.feature-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card i {
+    font-size: 2.5em;
+    color: #e74c3c;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .gta-info-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}
