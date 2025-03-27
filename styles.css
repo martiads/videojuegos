@@ -281,6 +281,68 @@ body {
     transform: translateY(0);
 }
 
+/* Modal for Trailers */
+.trailer-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.trailer-modal.active {
+    display: flex;
+}
+
+.modal-content {
+    position: relative;
+    width: 90%;
+    max-width: 900px;
+    max-height: 80vh;
+    background-color: #000;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
 /* Featured and Highlight Sections */
 .highlight {
     background: var(--gradient-secondary);
@@ -607,156 +669,81 @@ body {
 }
 
 /* Modal for Trailers */
-/* Add these styles for the trailer modal */
-.trailer-modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 1000;
-    justify-content: center;
-    align-items: center;
-}
-
-.trailer-modal.active {
+/* Header background image styling */
+.hero-header {
+    position: relative;
+    overflow: hidden;
+    min-height: 500px;
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.modal-content {
-    position: relative;
-    width: 90%;
-    max-width: 900px;
-    background-color: #000;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.close-modal {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    font-size: 20px;
-    cursor: pointer;
-    z-index: 10;
-}
-
-.video-container {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
-    height: 0;
-    overflow: hidden;
-}
-
-.video-container iframe {
+.header-background {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    z-index: 0;
 }
 
-/* Scroll to Top Button */
-.scroll-top {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: var(--accent-color);
-    color: white;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: var(--shadow-md);
-    opacity: 0;
-    visibility: hidden;
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 1.25); /* Increased darkness from 1 to 1.25 */
+    z-index: 1;
+}
+
+.header-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    padding: 2rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.header-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* Stronger text shadow */
+    letter-spacing: 2px;
+}
+
+.header-content .tagline {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8); /* Stronger text shadow */
+    font-weight: 500; /* Slightly bolder */
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.7rem 1.5rem;
+    border-radius: 30px;
     transition: var(--transition-normal);
-    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.5); /* Darker background for buttons */
+    backdrop-filter: blur(5px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Add shadow to buttons */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Text shadow for button text */
 }
 
-.scroll-top.visible {
-    opacity: 1;
-    visibility: visible;
+.nav-link:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
 }
-
-.scroll-top:hover {
-    background: #c0392b;
-    transform: translateY(-5px);
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 1200px) {
-    .featured-launches {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero-header h1 {
-        font-size: 3rem;
-    }
-    
-    .featured-launches {
-        grid-template-columns: 1fr;
-    }
-    
-    .nav-list {
-        gap: 1rem;
-    }
-    
-    .section-title {
-        font-size: 2rem;
-    }
-    
-    .highlight {
-        padding: 2rem;
-    }
-    
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-header h1 {
-        font-size: 2.5rem;
-    }
-    
-    .tagline {
-        font-size: 1.2rem;
-    }
-    
-    .nav-link {
-        padding: 0.5rem 1rem;
-    }
-    
-    .container {
-        padding: 1rem;
-    }
-    
-    .game-title {
-        font-size: 1.2rem;
-    }
-    
-    .legal-links {
-        flex-direction: column;
-        gap: 1rem;
-    }
-}
-/* Add these styles to your existing CSS file */
 
 .gta-header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('/api/placeholder/1920/1080');
