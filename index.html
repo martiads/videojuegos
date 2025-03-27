@@ -49,7 +49,7 @@
 
                 <article class="game-card">
                     <div class="game-image">
-                        <img src="/imatges/avowed cover.jpg" alt="Avowed">
+                        <img src="C:\Users\Martí Llanos\Desktop\personal\videojuegos\imatges\avowed cover.jpg" alt="Avowed">
                         <div class="game-overlay">
                             <button class="play-trailer" data-trailer="https://www.youtube.com/embed/wmrl2z7xaKA"><i class="fas fa-play"></i> Ver Tráiler</button>
                         </div>
@@ -64,7 +64,7 @@
 
                 <article class="game-card">
                     <div class="game-image">
-                        <img src="/imatges/assasins creed shadows cover.jpg" alt="Assassin's Creed Shadows">
+                        <img src="C:\Users\Martí Llanos\Desktop\personal\videojuegos\imatges\assasins creed shadows cover.jpg" alt="Assassin's Creed Shadows">
                         <div class="game-overlay">
                             <button class="play-trailer" data-trailer="https://www.youtube.com/embed/vovkzbtYBC8"><i class="fas fa-play"></i> Ver Tráiler</button>
                         </div>
@@ -99,9 +99,9 @@
             <h2 class="section-title">Monster Hunter Wilds</h2>
             <div class="game-card featured">
                 <div class="game-image featured-image">
-                    <img src="/imatges/monster hunter wilds cover.avif" alt="Monster Hunter Wilds">
+                    <img src="C:\Users\Martí Llanos\Desktop\personal\videojuegos\imatges\monster hunter wilds cover.avif" alt="Monster Hunter Wilds">
                     <div class="game-overlay">
-                        <button class="play-trailer" data-trailer="https://www.youtube.com/embed/3pna-XDoVLo"><i class="fas fa-play"></i> Ver Tráiler</button>
+                        <button class="play-trailer" data-trailer="https://www.youtube.com/embed/a_wNFT4j6qI"><i class="fas fa-play"></i> Ver Tráiler</button>
                     </div>
                 </div>
                 <div class="game-content">
@@ -132,7 +132,7 @@
             <div class="game-grid">
                 <article class="game-card nintendo">
                     <div class="game-image">
-                        <img src="/imatges/metroid prime 4 beyond cover.jpg" alt="Metroid Prime 4">
+                        <img src="C:\Users\Martí Llanos\Desktop\personal\videojuegos\imatges\metroid prime 4 beyond cover.jpg" alt="Metroid Prime 4">
                         <div class="platform-badge nintendo-badge">Nintendo</div>
                     </div>
                     <div class="game-content">
@@ -145,7 +145,7 @@
 
                 <article class="game-card nintendo">
                     <div class="game-image">
-                        <img src="/imatges/pokemon legends z-a cover.jpg" alt="Pokémon Legends: Z-A">
+                        <img src="C:\Users\Martí Llanos\Desktop\personal\videojuegos\imatges\pokemon legends z-a cover.jpg" alt="Pokémon Legends: Z-A">
                         <div class="platform-badge nintendo-badge">Nintendo</div>
                     </div>
                     <div class="game-content">
@@ -158,7 +158,7 @@
 
                 <article class="game-card sony">
                     <div class="game-image">
-                        <img src="/imatges/death standing 2 on the beach cover.jpg" alt="Death Stranding 2">
+                        <img src="C:\Users\Martí Llanos\Desktop\personal\videojuegos\imatges\death standing 2 on the beach cover.jpg" alt="Death Stranding 2">
                         <div class="platform-badge sony-badge">PlayStation</div>
                     </div>
                     <div class="game-content">
@@ -176,7 +176,7 @@
             <div class="game-grid">
                 <article class="game-card">
                     <div class="game-image">
-                        <img src="/imatges/ghost of yotei cover.webp" alt="Ghost of Yōtei">
+                        <img src="C:\Users\Martí Llanos\Desktop\personal\videojuegos\imatges\ghost of yotei cover.webp" alt="Ghost of Yōtei">
                         <div class="platform-badge sony-badge">PlayStation</div>
                     </div>
                     <div class="game-content">
@@ -189,7 +189,7 @@
 
                 <article class="game-card">
                     <div class="game-image">
-                        <img src="/imatges/fable cover.webp" alt="Fable">
+                        <img src="C:\Users\Martí Llanos\Desktop\personal\videojuegos\imatges\fable cover.webp" alt="Fable">
                         <div class="platform-badge xbox-badge">Xbox</div>
                     </div>
                     <div class="game-content">
@@ -202,7 +202,7 @@
 
                 <article class="game-card">
                     <div class="game-image">
-                        <img src="/imatges/dune awakening cover.jpg" alt="Dune: Awakening">
+                        <img src="C:\Users\Martí Llanos\Desktop\personal\videojuegos\imatges\dune awakening cover.jpg" alt="Dune: Awakening">
                     </div>
                     <div class="game-content">
                         <h3 class="game-title">Dune: Awakening</h3>
@@ -298,6 +298,18 @@
                     modal.classList.remove('active');
                 }
             });
+            
+            // Guardar la posición de desplazamiento al salir de la página
+            window.addEventListener('beforeunload', function() {
+                localStorage.setItem('indexScrollPosition', window.pageYOffset);
+            });
+            
+            // Restaurar la posición de desplazamiento si se regresa desde otra página
+            const urlParams = new URLSearchParams(window.location.search);
+            const scrollPosition = urlParams.get('scrollTo');
+            if (scrollPosition) {
+                window.scrollTo(0, parseInt(scrollPosition));
+            }
         });
     </script>
 </body>
